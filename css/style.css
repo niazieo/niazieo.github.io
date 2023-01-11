@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap");
+:root {
+    /*colors*/
+    --red: #f7768e;
+    --orange: #ff9e64;
+    --brownish: #e0af68;
+    --green: #9ece6a;
+    --torqoise: #73daca;
+    --light-cyan: #b4f9f8;
+    --blue: #2ac3de;
+    --sky-blue: #7dcfff;
+    --blue-hue: #7aa2f7;
+    --lavender: #bb9af7;
+    --faded-purple: #c0caf5;
+    --slate: #a9b1d6;
+    --dark-slate: #9aa5ce;
+    --faded-khaki: #cfc9c2;
+    --dark-grey: #565f89;
+    --terminal-black: #414868;
+    --black: #1a1b26;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000000, #565f89);
+}
+/* header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: var(--lavender);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--torqoise);
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a:active{
+    background: var(--slate);
+    color: var(--brownish)
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+} */
+/* section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section img#bg{
+    mix-blend-mode: color-burn;
+} */
+
+/*Hero Div*/
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/stars.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Logo*/
+.logo{
+    color: var(--orange);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/*Navigation Bar*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--torqoise);
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:active{
+    background: var(--slate);
+    color: var(--brownish);
+    transition: .6s;
+}
+
+/*Content div*/
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: var(--lavender);
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h4{
+    color: var(--dark-slate);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+/*Project div*/
+.projects{
+    background-image: url(/images/not-as-blurry.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2{
+    color: var(--red);
+    font-size: 50px;
+    width: 1130px;
+    margin: 30px auto;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    text-align: center;
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 20px;
+    background: var(--faded-purple);
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: var(--sky-blue);
+}
+
+.card .img {
+    height: 100px;
+    width: 100px;
+}
+h5{
+    color: #0f4b6e;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.desc p{
+    color: var(--black);
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+.card .button{
+    background: var(--dark-grey);
+    color: var(--blue-hue);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .6;
+}
