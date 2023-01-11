@@ -27,62 +27,8 @@
 }
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #000000, #565f89);
+    background: linear-gradient(to bottom, #000000, #464d6e);
 }
-/* header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header .logo{
-    color: var(--lavender);
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-header ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header ul li {
-    list-style: none;
-    margin-left: 20px;
-}
-header ul li a{
-    text-decoration: none;
-    padding: 6px 15px;
-    color: var(--torqoise);
-    border-radius: 20px;
-}
-header ul li a:hover,
-header ul li a:active{
-    background: var(--slate);
-    color: var(--brownish)
-}
-
-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-} */
-/* section img{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-section img#bg{
-    mix-blend-mode: color-burn;
-} */
-
 /*Hero Div*/
 .hero{
     height: 100vh;
@@ -153,14 +99,22 @@ h4{
 
 /*Project div*/
 .projects{
-    background-image: url(/images/not-as-blurry.png);
+    background: url(/images/stars.png);
+    --background-image: url(/images/not-as-blurry.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     padding: 100px 0px;
 }
-
+footer{
+    background-image: url(/images/citynight.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    padding: 100px 0px;
+}
 .title h2{
     color: var(--red);
     font-size: 50px;
