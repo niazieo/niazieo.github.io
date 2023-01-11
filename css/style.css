@@ -100,7 +100,6 @@ h4{
 /*Project div*/
 .projects{
     background: url(/images/stars.png);
-    --background-image: url(/images/not-as-blurry.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,7 +131,7 @@ footer{
     height: 365px;
     width: 335px;
     padding: 20px;
-    background: var(--faded-purple);
+    background: var(--dark-slate);
     border-radius: 20px;
     margin: 15px;
     position: relative;
