@@ -22,7 +22,6 @@
     --black: #1a1b26;
     --neon-pink: rgb(216, 32, 164);
     --neon-bg: hsl(323 21% 16%);
-    --nice-red: rgba(202, 76, 114, 0.815)
 }
 *{
     padding: 0;
@@ -30,21 +29,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-::selection{
-    background: rgb(64, 2, 165);
-}
 body {
     min-height: 100vh;
-    background: var(--black);
-    /* background: linear-gradient(to bottom, #000000, #474b6c); */
+    background: linear-gradient(to bottom, #000000, #474b6c);
 }
-
 /*Hero Div*/
 .hero{
     height: 100vh;
     width: 100%;
-    /* background-image: url(/images/a.jpg); */
-    /* background-image: url(../images/stars2.png); */
+    background-image: url(../images/stars.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,20 +143,10 @@ nav ul li a:hover::after{
     right: 8%;
 }
 h1{
-    pointer-events: none;
     font-family: 'Sofia Sans', sans-serif;
-    color: rgba(216, 64, 208, 0.815);
+    color: rgba(202, 76, 114, 0.815);
     margin: 20px 0px 20px;
     font-size: 75px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-
-    text-shadow: 
-        0 0 0.125em hsl(0 0% 100% / .3),
-        0 0 0.45em currentColor ;
-
-    position: relative;
 }
 h4{
     color: var(--dark-slate);
@@ -173,26 +156,26 @@ h4{
 
 /*Project div*/
 .projects{
-    /* background: url(/images/stars2.png); */
+    background: url(/images/stars.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     padding: 100px 0px;
 }
-/* footer{
-    background-image: url(/images/retro.png);
-    background-size: cover;
+footer{
+    background-image: url(/images/citynight.gif);
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     padding: 100px 0px;
-} */
+}
 .title h2{
     font-size: 40px;
     width: 1130px;
     margin: 30px auto;
-    background: -webkit-linear-gradient(var(--nice-red), var(--slate));
+    background: -webkit-linear-gradient(var(--red), var(--faded-khaki));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -205,10 +188,10 @@ h4{
     text-align: center;
 }
 .card{
-    /* height: 365px;
+    height: 365px;
     width: 335px;
     padding: 10px;
-    background: var(--neon-pink);
+    background: var(--dark-slate);
     border-radius: 20px;
     margin: 15px;
     position: relative;
@@ -216,33 +199,11 @@ h4{
     text-align: center;
     box-shadow: 10px 10px #434C56;
     transform: scale(.85);
-    transition: transform .4s; */
-    height: 365px;
-    width: 335px;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 15px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--terminal-black);
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    /* border: var(--neon-pink) 0.125em solid; */
-    padding: .25em 1.25em;
-    border-radius: 0.25em;
-
-    box-shadow: 10px 10px rgba(216, 64, 208, 0.815);
-    transform: scale(.85);
     transition: transform .4s;
-
 }
-
 .card:hover{
-    opacity: 1;
-    transform: scale(1.1);
-} 
+    transform: scale(1)
+}
 .card i{
     font-size: 50px;
     display: block;
@@ -256,44 +217,62 @@ h4{
     width: 100px;
 }
 h5{
-    color: lavender;
+    color: #0f4b6e;
     font-size: 23px;
     margin-bottom: 15px;
 }
 .desc p{
-    color: var(--blue);
+    color: var(--black);
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
 }
 .card .button{
-    /* background: var(--dark-grey);
+    background: var(--dark-grey);
     color: var(--blue-hue);
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
     padding: 9px 22px;
-    border-radius: 30px; */
+    border-radius: 30px;
 
     /*Neon Button*/
-    display: inline-block;
+    /* display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--blue);
-    border: rgba(216, 64, 208, 0.815) 0.125em solid;
+    color: var(--neon-pink);
+    border: var(--neon-pink) 0.125em solid;
     padding: .25em 1.25em;
     border-radius: 0.25em;
+
     text-shadow: 
         0 0 0.125em hsl(0 0% 100% / .3),
         0 0 0.45em currentColor ;
 
     box-shadow: 
-       inset 0 0 .5em 0 rgba(216, 64, 208, 0.815),
-        0 0 .5em 0 rgba(216, 64, 208, 0.815);
+       inset 0 0 .5em 0 var(--neon-pink),
+        0 0 .5em 0 var(--neon-pink);
 
     position: relative;
 
     transition: background-color 100ms linear;
+}
+.card .button::before{
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: var(--neon-pink);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: 
+        perspective(1em) 
+        rotateX(40deg)
+        scale(1, 0.35);
+    filter: blur(1em);
+    opacity: .7;
 }
 
 .card .button::after{
@@ -303,16 +282,16 @@ h5{
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0 0 2em .5em rgba(216, 64, 208, 0.815);
+    box-shadow: 0 0 2em .5em var(--neon-pink);
     opacity: 0;
     transition: opacity 100ms linear;
 }
 .card .button:hover,
 .card .button:focus{
-    background-color: rgba(216, 64, 208, 0.815);
+    background-color: var(--neon-pink);
     color: var(--neon-bg);
     text-shadow: none;
 }
 .card .button:hover::after{
     opacity: 1;
-} 
+} */
