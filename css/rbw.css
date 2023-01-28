@@ -22,6 +22,7 @@
     --black: #1a1b26;
     --neon-pink: rgb(216, 32, 164);
     --neon-bg: hsl(323 21% 16%);
+    --nice-red: rgba(202, 76, 114, 0.815)
 }
 *{
     padding: 0;
@@ -30,20 +31,18 @@
     font-family: 'Poppins', sans-serif;
 }
 ::selection{
-    background: rgb(220, 220, 245);
+    background: rgb(64, 2, 165);
 }
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #000000, #474b6c);
+    background: var(--black);
 }
+
 /*Hero Div*/
 .hero{
     height: 100vh;
     width: 100%;
-    background-image: url(../images/stars.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    align-items: center;
 }
 /*Logo*/
 .logo{
@@ -65,73 +64,23 @@ nav ul li{
     padding: 10px 25px;
 }
 nav ul li a{
-    /* text-decoration: none;
-    padding: 6px 15px;
-    color: var(--torqoise);
-    border-radius: 20px;
-    font-weight: bold;
-    text-transform: capitalize;
-    text-decoration: none; */
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--slate);
-    border: var(--slate) 0.125em solid;
+    color: #faf6f3;
     padding: .25em 1.25em;
     border-radius: 0.25em;
-
-    text-shadow: 
-        0 0 0.125em hsl(0 0% 100% / .3),
-        0 0 0.45em currentColor ;
-
-    box-shadow: 
-       inset 0 0 .5em 0 var(--slate),
-        0 0 .5em 0 var(--slate);
-
     position: relative;
-
     transition: background-color 100ms linear;
 }
-/* nav ul li a::before{
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    background: var(--sky-blue);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
 
-    transform: 
-        perspective(1em) 
-        rotateX(40deg)
-        scale(1, 0.25);
-    filter: blur(1em);
-    opacity: .7;
-} */
-nav ul li a::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: 0 0 2em .5em var(--slate);
-    opacity: 0;
-    transition: opacity 100ms linear;
-}
 nav ul li a:hover,
 nav ul li a:active{
-    /* background: var(--slate);
-    color: var(--brownish);
-    transition: .4s; */
-    background-color: var(--slate);
-    color: var(--dark-grey);
+    background-color:#faf6f3;
+    color: red;
     text-shadow: none;
 }
-nav ul li a:hover::after{
-    opacity: 1;
-} 
+
 
 /*Content div*/
 .content{
@@ -146,10 +95,19 @@ nav ul li a:hover::after{
     right: 8%;
 }
 h1{
+    pointer-events: none;
     font-family: 'Sofia Sans', sans-serif;
-    color: rgba(80, 92, 255, 0.89);
+    color: var(--nice-red);
     margin: 20px 0px 20px;
     font-size: 75px;
+    cursor: pointer;
+    text-decoration: none;
+
+    /* text-shadow: 
+        0 0 0.125em hsl(0 0% 100% / .3),
+        0 0 0.45em currentColor ; */
+
+    position: relative;
 }
 h4{
     color: var(--dark-slate);
@@ -159,26 +117,18 @@ h4{
 
 /*Project div*/
 .projects{
-    background: url(/images/stars.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     padding: 100px 0px;
 }
-footer{
-    background-image: url(/images/citynight.gif);
-    background-size: contain;
-    background-position: center;
-    background-repeat: repeat;
-    width: 100%;
-    padding: 100px 0px;
-}
+
 .title h2{
     font-size: 40px;
     width: 1130px;
     margin: 30px auto;
-    background: -webkit-linear-gradient(#a9b1d6, #5d90ff);
+    background: -webkit-linear-gradient(red, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -194,19 +144,29 @@ footer{
     height: 365px;
     width: 335px;
     padding: 10px;
-    background: var(--dark-slate);
     border-radius: 20px;
     margin: 15px;
     position: relative;
     overflow: hidden;
     text-align: center;
-    box-shadow: 10px 10px #434C56;
+    background: var(--terminal-black);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    /* border: var(--neon-pink) 0.125em solid; */
+    padding: .25em 1.25em;
+    border-radius: 0.25em;
+
+    box-shadow: 10px 10px rgba(216, 64, 208, 0.815);
     transform: scale(.85);
     transition: transform .4s;
+
 }
+
 .card:hover{
-    transform: scale(1)
-}
+    opacity: 1;
+    transform: scale(1.1);
+} 
 .card i{
     font-size: 50px;
     display: block;
@@ -220,62 +180,36 @@ footer{
     width: 100px;
 }
 h5{
-    color: #0f4b6e;
+    color: lavender;
     font-size: 23px;
     margin-bottom: 15px;
 }
 .desc p{
-    color: var(--black);
+    color: var(--blue);
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
 }
 .card .button{
-    background: var(--dark-grey);
-    color: var(--blue-hue);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 9px 22px;
-    border-radius: 30px;
-
     /*Neon Button*/
-    /* display: inline-block;
+    display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: var(--neon-pink);
-    border: var(--neon-pink) 0.125em solid;
+    color: var(--blue);
+    border: rgba(216, 64, 208, 0.815) 0.125em solid;
     padding: .25em 1.25em;
     border-radius: 0.25em;
-
     text-shadow: 
         0 0 0.125em hsl(0 0% 100% / .3),
         0 0 0.45em currentColor ;
 
     box-shadow: 
-       inset 0 0 .5em 0 var(--neon-pink),
-        0 0 .5em 0 var(--neon-pink);
+       inset 0 0 .5em 0 rgba(216, 64, 208, 0.815),
+        0 0 .5em 0 rgba(216, 64, 208, 0.815);
 
     position: relative;
 
     transition: background-color 100ms linear;
-}
-.card .button::before{
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    background: var(--neon-pink);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    transform: 
-        perspective(1em) 
-        rotateX(40deg)
-        scale(1, 0.35);
-    filter: blur(1em);
-    opacity: .7;
 }
 
 .card .button::after{
@@ -285,16 +219,16 @@ h5{
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0 0 2em .5em var(--neon-pink);
+    box-shadow: 0 0 2em .5em rgba(216, 64, 208, 0.815);
     opacity: 0;
     transition: opacity 100ms linear;
 }
 .card .button:hover,
 .card .button:focus{
-    background-color: var(--neon-pink);
+    background-color: rgba(216, 64, 208, 0.815);
     color: var(--neon-bg);
     text-shadow: none;
 }
 .card .button:hover::after{
     opacity: 1;
-} */
+} 
