@@ -3,38 +3,104 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="css/star.css" rel="stylesheet"/>
+        <link href="css/neon.css" rel="stylesheet"/>
         <title>Omar's Portfolio</title>
     </head>
     <body>
-        <div class="hero">
+        <div class="navbar">
             <nav>
-                <img class='logo' src="/images/moon.png">
+                <img class='logo' src="images/moon.png">
                 <ul>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#stuff">Projects</a></li>
                     <li><a href="https://github.com/niazieo">Github</a></li>
                     <li><a href="https://www.linkedin.com/in/omarniazie/">LinkedIn</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="hello">
+            <h4>Hello, my name is</h4>
+            <img class="me" src="images/me2.jpg"/>
+            <h1>Omar Niazie</h1>
+        </div>
 
         <div class="content">
-            <h4>Hello, my name is</h4>
-            <h1>Omar Niazie</h1>
-            <h4>This website is currently under development! :D</h4>
+            <div class="about">
+                <h2 id="about">About me</h2>
+                <p>I am a 4th year undergraduate Computer Science student with a minor in Bioinformatics 
+                    at the University of Alberta. I enjoy learning about technology and how they work as
+                    well as various computer science topics. But recently I have started to enjoy learning
+                    more about network security as well as web development. 
+                </p>
+                <h2>What I have to offer</h2>
+                <p>Being involved in these clubs has exposed me to new problem-solving techniques and 
+                    learning new technologies and programming languages; this is a result of listening 
+                    to industry professionals and working with fellow undergraduates. My time management and 
+                    communication skills developed largely from the interactions with customers and 
+                    co-workers as a sales associate. Working in a large-scale company has taught me how to 
+                    be a good employee and manage time between school and work. Being an active student 
+                    during the week and then working during the weekend has forced me to prioritize and 
+                    focus my workflow. I have worked on several projects where I have applied my knowledge
+                    and learned new technologies and languages. Developing Noctua has allowed me to learn 
+                    a bit about Javascript and Firebase Firestore. While building an app that is essentially 
+                    Pokemon Go but for QR codes, I demonstrated my use of various technologies and used scrum
+                    methodologies to deliver QRHunt within 4 months. Currently, I am learning and using the 
+                    MERN stack to develop a social media website in my web development course and Ruby-on-Rails
+                    and PERL in my Bioinformatics course.
+                </p>
+                <h2>Professional History</h2>
+                <h4>Telus Communications - Junior Sales Representative</h4>
+                <p>Edmonton, AB &emsp; May 2021 - Aug 2021</p>
+                <ul class="desc">
+                    <li>Selling products and services using solid arguments to prospective customers</li>
+                    <li>Performing cost-benefit analyses of existing and potential customers</li>
+                    <li>Using strong research skills and deep product or industry knowledge to answer any questions about the product</li>
+                    <li>Establish, develop and maintain positive business and customer relationships</li>
+                </ul>
+
+                <h4>Foxx Canada - General Services</h4>
+                <p>Edmonton, AB &emsp; May 2020 - Aug 2020</p>
+                <ul class="desc">
+                    <li>Assisted Lab Tech in logging and preparing oil samples received daily for testing</li>
+                    <li>Entered test results on excel data based and complete PDF reports to be reviewed by staff</li>
+                    <li>Worked with shop crew to prepare pipeline maintenance pigs for cleaning and deliver back to customer</li>
+                    <li>Cleaned and maintained work area as required to ensure a safe environment</li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <h3>Programming Languages</h3>
+                <ul class="list">
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>HTML/CSS</li>
+                </ul>
+                <h3>Databases</h3>
+                <ul class="list">
+                    <li>MongoDB</li>
+                    <li>Firebase Firestore</li>
+                </ul>
+                <h3>Technologies</h3>
+                <ul class="list">
+                    <li>Github</li>
+                    <li>Git</li>
+                    <li>Raspberry Pi</li>
+                    <li>Heroku</li>
+                    <li>Twilio</li>
+                    <li>Visual Studio Code</li>
+                    <li>Vim</li>
+                    <li>Nano</li>
+                </ul>
+            </div>
         </div>
 
         <div class="projects">
-            <div class="title">
-                <h2 id="stuff"> Some Projects I've Done</h2>
-            </div>
+            <h2 id="stuff">Projects</h2>
             <div class="box">
                 <div class="card">
                     <i class="fas fa-bars"></i>
-                    <img class="img" src="/images/owl-icon.png">
+                    <img class="img" src="images/owl-icon.png">
                     <h5>Noctua</h5>
-                    <div class="desc">
+                    <div class="descproj">
                         <p>A multifunction discord bot that uses DiscordJS V14 slash commands and Firebase Firestore</p>
                         <p style="text-align: center;">
                             <a class="button" href="https://github.com/niazieo/Discord-Bot-V2">Github</a>
@@ -43,10 +109,10 @@
                 </div>
                 <div class="card">
                     <i class="fas fa-bars"></i>
-                    <img class="img" src="/images/qrhunt.png">
+                    <img class="img" src="images/qrhunt.png">
                     <h5>QRHunt</h5>
-                    <div class="desc">
-                        <p>Pokemon Go but with QR codes</p>
+                    <div class="descproj">
+                        <p>Java app based off of Pokemon Go but using QR Codes instead.</p>
                         <p style="text-align: center;">
                             <a class="button" href="https://github.com/CMPUT301W22T00/QRHunt">Github</a>
                         </p>
@@ -56,30 +122,6 @@
         </div>
 
         <footer>
-            
         </footer>
-        
-        
-        <!-- <header>
-            <a href="#" class="logo">Omar</a>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </header>
-        <main>
-            <img src="/images/stars.png" id="stars">
-        </main>
-        <footer>
-
-        </footer> -->
-        <!-- <section>
-            <img src="/images/stars.png" id="stars">
-            <img src="/images/city-bg2.png" id="bg">
-            <img src="/images/TN1 temp.png" id="tn1">
-            <img src="/images/TN2 temp.png" id="tn2">
-        </section> -->
     </body>
 </html>
